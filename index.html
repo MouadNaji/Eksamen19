@@ -9,6 +9,41 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .pilned{
+            width: 5rem;
+            height: auto;
+            padding-top: 35rem;
+            text-align: center;
+        }
+        .splash{
+            width: 100vw;
+            height: 42rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+        }
+        .Overskrift{
+            padding: 3rem;
+            font-size: 2rem;
+        }
+        .billede img{
+            width: 15rem;
+            height: auto;
+        }
+        .billede h2{padding: 2rem;}
+        main{
+           text-align: center;
+        }
+        .sealle{
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -45,15 +80,77 @@
         </div>
 
     </header>
+    <div class="splash">
+        <a href="#overskrift"><img class="pilned" src="img/splashpil.png"></a>
+    </div>
 
 
 
 
+    <main>
+        <div class="Overskrift" id="overskrift"></div>
+        <div class="billede ringe"></div>
+        <div class="billede vielsesringe"></div>
+        <div class="billede reringe"></div>
+        <div class="billede armbnd"></div>
+        <div class="billede halskder"></div>
+        <div class="billede gave-ideer"></div>
+    </main>
+    <div class="sealle">
+        <a href="smykker.html">SE ALLE</a>
 
-    <main></main>
+    </div>
 
     <footer></footer>
 
 
-    <script src=""></script>
-</body></html>
+    <script>
+        document.addEventListener("DOMContentLoaded", hentJson);
+        //her bliver der sørget for at den går igang med funktionen hentJson2 efter DOM er loaded
+
+
+        let forside;
+        //Her difineres variablen forside
+
+        async function hentJson() {
+            //her startes en async funktion
+            const url = "http://mouad.dk/kea2semester/Eksamen/wordpress//wp-json/wp/v2/forside/18";
+            //her sættes link med rest api ind
+            const myJson = await fetch(url);
+            //her hentes data filen som er lavet i wordpress
+            forside = await myJson.json();
+            //den hentede data skal tolkes som json
+
+            visIndhold();
+            //her kaldes funktion der viser data i DOM
+        };
+
+        function visIndhold() {
+            console.log(forside)
+            //sørger for at funktionen kommer op i console
+            document.querySelector(".splash").innerHTML += `<style>
+        .splash {
+            background-image: url(${forside.splash.guid})
+        }
+    </style>
+`;
+            //Her hentes dataen ned på header tagget
+            document.querySelector(".Overskrift").innerHTML += forside.overskrift;
+            //Her hentes dataen ned på .forsideoverskrift attributten
+            document.querySelector(".ringe").innerHTML += `<img src="${forside.ringe.guid}" alt="Ringe"> <h2>Ringe</h2>`
+            //Her hentes dataen ned på .forsidetekst attributten
+            document.querySelector(".vielsesringe").innerHTML += `<img src="${forside.vielsesringvielsesringee.guid}" alt="Ringe"> <h2>Vielsesringe</h2>`
+            //Her hentes dataen ned på .forsidetekst2 attributten
+            document.querySelector(".reringe").innerHTML += `<img src="${forside.reringe.guid}" alt="Ringe"> <h2>Øreringe</h2>`
+            //Her hentes dataen ned på .forsidetekst3 attributten
+            document.querySelector(".armbnd").innerHTML += `<img src="${forside.armbnd.guid}" alt="Ringe"> <h2>Armbånd</h2>`
+            //Her hentes dataen ned på .forsidetekst4 attributten
+            document.querySelector(".halskder").innerHTML += `<img src="${forside.halskder.guid}" alt="Ringe"> <h2>Halskæde</h2>`
+            //Her hentes dataen ned på .forsidetekst4 attributten
+            document.querySelector(".gave-ideer").innerHTML += `<img src="${forside.gaveideer.guid}" alt="Ringe"> <h2>Gave-ideer</h2>`
+            //Her hentes dataen ned på .forsidetekst4 attributten
+        }
+    </script>
+</body>
+
+</html>
