@@ -1,1 +1,15 @@
+#footer_box {
+    text-align: center;
 
+}
+
+#footer_box a {
+    text-decoration: none;
+}
+
+
+#footer_box img {
+    padding: 20px 10px;
+    width: 20px;
+    height: 20px;
+}
