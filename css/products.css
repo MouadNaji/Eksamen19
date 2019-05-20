@@ -5,6 +5,12 @@
 
 }
 
+#about_products h1 {
+
+    margin-bottom: 50px;
+
+}
+
 
 
 
@@ -45,6 +51,20 @@
     #upper_box .text {
         display: none;
     }*/
+
+
+    #about_products {
+
+        text-align: center;
+        margin: 200px 12vw 80px;
+
+    }
+
+    #about_products h1 {
+
+        margin-bottom: 20px;
+
+    }
 
 
     #upper_box {

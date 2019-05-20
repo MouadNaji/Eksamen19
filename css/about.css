@@ -6,10 +6,16 @@
 
 }
 
+#video_box h1 {
+    margin-bottom: 20px;
+}
+
 
 
 #about_title {
     text-align: center;
+    margin-bottom: 20px;
+
 }
 
 
@@ -40,7 +46,7 @@
 
     #video_box {
 
-        margin-top: 150px;
+        margin-top: 200px;
         width: 800px;
     }
 
