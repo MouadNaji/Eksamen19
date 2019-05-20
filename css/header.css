@@ -102,7 +102,7 @@ body input ~ nav > ul > li {
 body input ~ nav > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #B1B1B1;
+    color: #4D4D4D;
 
     display: block;
     padding: 30px;
