@@ -17,11 +17,20 @@ h5,
 h6,
 a {
 
-    font-family: 'Suranna',
-        serif;
+    font-family: 'Suranna';
+    font-weight: 100;
+    color: #4D4D4D;
 }
 
 p {
     font-family: 'Prata',
         serif;
+    color: #4D4D4D;
+    font-weight: 100;
+
+}
+
+
+h1 {
+    font-size: 3rem;
 }
