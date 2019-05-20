@@ -1,1 +1,150 @@
+#about_products {
+    text-align: center;
+    margin: 80px 12vw;
+}
 
+
+
+
+
+#upper_box img {
+    width: 80vw;
+    display: block;
+    margin: 20px auto;
+
+}
+
+#upper_box .text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#lower_box img {
+    width: 80vw;
+    display: block;
+    margin: 20px auto;
+
+}
+
+#lower_box .text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    /*
+    #upper_box .text {
+        display: none;
+    }*/
+
+
+    #upper_box {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    #lower_box {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+
+
+
+    #large_box {
+        position: relative;
+    }
+
+
+    #large_box img {
+
+        height: auto;
+        width: 50vw;
+        height: 50vw;
+        ;
+        margin: 0.5vw;
+        position: relative;
+
+
+    }
+
+
+
+    #small_box {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    #small1 {
+        position: relative;
+    }
+
+    #small2 {
+        position: relative;
+    }
+
+    #small_box img {
+        height: auto;
+        width: 24.5vw;
+        height: 24.5vw;
+
+        margin: 0.5vw;
+
+    }
+
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: auto;
+
+    }
+
+    #large_box:hover .overlay {
+        opacity: 1;
+        width: 50vw;
+        height: 50vw;
+
+    }
+
+    #small1:hover .overlay {
+        opacity: 1;
+        width: 24.5vw;
+        height: 24.5vw;
+    }
+
+    #small2:hover .overlay {
+        opacity: 1;
+        width: 24.5vw;
+        height: 24.5vw;
+    }
+
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+
+}
