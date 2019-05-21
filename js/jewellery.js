@@ -1,6 +1,111 @@
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+
+    chooseCategory();
+});
+
+
+function chooseCategory() {
+
+
+    console.log(window.location.search);
+
+    if (window.location.search == "?cat=rings") {
+
+        openRings();
+
+    }
+
+    if (window.location.search == "?cat=wedding_rings") {
+
+        openWeddingRings();
+
+    }
+
+    if (window.location.search == "?cat=ear_rings") {
+
+        openEarRings();
+
+    }
+
+    if (window.location.search == "?cat=bracelets") {
+
+        openBracelets();
+
+    }
+
+
+    if (window.location.search == "?cat=necklaces") {
+
+        openNecklaces();
+
+    }
+
+    if (window.location.search == "?cat=gifts") {
+
+        openGifts();
+
+    }
+
+
+}
+
+function openRings() {
+    console.log("rings");
+
+    document.getElementById("rings").style.display = "block";
+
+
+}
+
+
+function openWeddingRings() {
+    console.log("weddingrings");
+
+    document.getElementById("wedding_rings").style.display = "block";
+
+
+}
+
+function openEarRings() {
+    console.log("earrings");
+
+    document.getElementById("ear_rings").style.display = "block";
+
+
+}
+
+function openBracelets() {
+    console.log("bracelets");
+
+    document.getElementById("bracelets").style.display = "block";
+
+
+}
+
+function openNecklaces() {
+    console.log("necklaces");
+
+    document.getElementById("necklaces").style.display = "block";
+
+
+}
+
+function openGifts() {
+    console.log("gifts");
+
+    document.getElementById("gifts").style.display = "block";
+
+
+}
+
+
 function myMobileFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
+
+
+
 
 function filterFunction() {
 
