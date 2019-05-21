@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smykker</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/jewellery.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+
+<header>
+
+    <div id="burger_display">
+        <input id="burger" type="checkbox" />
+
+
+        <label for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a href="products.html">SMYKKER</a></li>
+                <li><a href="projects.html">PROJEKTER</a></li>
+                <li><a href="about.html">OM OS</a></li>
+                <li><a href="contact.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="desktop_menu">
+        <a href="products.html">SMYKKER</a>
+        <a href="projects.html">PROJEKTER</a>
+        <a href="index.html">LOGO</a>
+        <a href="about.html">OM OS</a>
+        <a href="products.html">KONTAKT</a>
+    </div>
+
+</header>
+
+
+<main>
+
+    <div id="jewellery_img">
+
+        <img src="img/index1.jpg" alt="">
+    </div>
+
+    <div class="dropdown">
+        <button onclick="myMobileFunction()" class="dropbtn">ALLE SMYKKER</button>
+        <div id="myDropdown" class="dropdown-content">
+
+            <button class="tablinks" onclick="openMobile(event, 'rings')">RINGE</button>
+            <button class="tablinks" onclick="openMobile(event, 'wedding_rings')">VIELSESRINGE</button>
+            <button class="tablinks" onclick="openMobile(event, 'ear_rings')">ØRERINGE</button>
+            <button class="tablinks" onclick="openMobile(event, 'necklaces')">HALSKÆDER</button>
+            <button class="tablinks" onclick="openMobile(event, 'bracelets')">ARMBÅND</button>
+            <button class="tablinks" onclick="openMobile(event, 'gifts')">GAVE-IDEER</button>
+        </div>
+    </div>
+
+    <div id="product_tab">
+        <div class="tab">
+            <button class="tablinks" onclick="openDesktop(event, 'rings')">RINGE</button>
+            <button class="tablinks" onclick="openDesktop(event, 'wedding_rings')">VIELSESRINGE</button>
+            <button class="tablinks" onclick="openDesktop(event, 'ear_rings')">ØRERINGE</button>
+            <button class="tablinks" onclick="openDesktop(event, 'necklaces')">HALSKÆDER</button>
+            <button class="tablinks" onclick="openDesktop(event, 'bracelets')">ARMBÅND</button>
+            <button class="tablinks" onclick="openDesktop(event, 'gifts')">GAVE-IDEER</button>
+        </div>
+    </div>
+
+    <div id="rings" class="tabcontent">
+        <img src="img/ring.jpg" alt="" id="large">
+        <img src="img/ring.jpg" alt="" id="large">
+        <img src="img/ring.jpg" alt="" id="large">
+        <img src="img/ring.jpg" alt="" id="large">
+
+    </div>
+
+    <div id="wedding_rings" class="tabcontent">
+        <img src="img/ring.jpg" alt="" id="large">
+        <img src="img/ring.jpg" alt="" id="large">
+        <img src="img/ring.jpg" alt="" id="large">
+        <img src="img/ring.jpg" alt="" id="large">
+
+    </div>
+
+    <div id="ear_rings" class="tabcontent">
+        <img src="img/earrings.jpg" alt="" id="large">
+        <img src="img/earrings.jpg" alt="" id="large">
+        <img src="img/earrings.jpg" alt="" id="large">
+        <img src="img/earrings.jpg" alt="" id="large">
+    </div>
+
+    <div id="necklaces" class="tabcontent">
+        <img src="img/necklace.jpg" alt="" id="large">
+        <img src="img/necklace.jpg" alt="" id="large">
+        <img src="img/necklace.jpg" alt="" id="large">
+        <img src="img/necklace.jpg" alt="" id="large">
+
+    </div>
+
+    <div id="bracelets" class="tabcontent">
+        <img src="img/bracelet.jpg" alt="" id="large">
+        <img src="img/bracelet.jpg" alt="" id="large">
+        <img src="img/bracelet.jpg" alt="" id="large">
+        <img src="img/bracelet.jpg" alt="" id="large">
+
+    </div>
+
+    <div id="gifts" class="tabcontent">
+        <img src="img/cufflinks.jpg" alt="" id="large">
+        <img src="img/cufflinks.jpg" alt="" id="large">
+        <img src="img/cufflinks.jpg" alt="" id="large">
+        <img src="img/cufflinks.jpg" alt="" id="large">
+
+    </div>
+
+
+
+
+
+
+
+</main>
+
+
+<footer>
+
+    <div id="footer_box">
+        <a href="https://www.facebook.com/frolov.savova/">
+
+            <img src="img/facebook.svg" alt="Facebook icon">
+        </a>
+
+        <a href="https://www.instagram.com/frolov_savova_jewelry/">
+            <img src="img/instagram.svg" alt="Instagram icon">
+        </a>
+    </div>
+</footer>
+
+<body>
+    <script src="js/jewellery.js"></script>
+</body></html>

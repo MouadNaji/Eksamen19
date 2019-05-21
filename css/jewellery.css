@@ -1,0 +1,198 @@
+#jewellery_img {
+    width: 100vw;
+    height: 50vh;
+}
+
+
+#jewellery_img img {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+#product_tab {
+    display: none
+}
+
+.tabcontent {
+    display: none;
+    margin: 10vw;
+
+}
+
+.tabcontent img {
+
+    width: 80vw;
+    height: 80vw;
+    margin-bottom: 10vw;
+
+}
+
+.dropbtn {
+
+    box-sizing: border-box;
+    background-color: #4D4D4D;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+    line-height: normal;
+    width: 100vw;
+
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #bfbfbf;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+
+.tablinks {
+    border: none;
+    line-height: normal;
+    width: 100vw;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width: 800px) {
+
+    #jewellery_img {
+        margin-top: 140px;
+    }
+
+    .dropbtn {
+        display: none;
+    }
+
+
+
+    #product_tab {
+        margin: auto;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: space-around;
+        width: 80vw;
+
+
+    }
+
+
+    .tablinks {
+        border: none;
+        line-height: normal;
+        width: auto;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .tab button {
+        line-height: 20px;
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 10px;
+        transition: 0.3s;
+        font-size: 1rem;
+
+
+    }
+
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 0;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        width: 80vw;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    /* Fade in tabs */
+    @-webkit-keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+    .tabcontent img {
+
+        width: 250px;
+        height: 250px;
+
+
+        margin-bottom: 0;
+
+
+    }
+
+}
