@@ -9,6 +9,183 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <style>
+        #fyld{
+            position: absolute;
+            top: 43rem;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .pilned{
+            width: 5rem;
+            height: auto;
+            padding-top: 35rem;
+            text-align: center;
+        }
+        .splash{
+            width: 100vw;
+            height: 42rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+
+        }
+
+        .container img{
+            padding: 1;
+        }
+        .Overskrift{
+            padding: 3rem;
+            font-size: 2rem;
+        }
+        .billede img{
+            width: 15rem;
+            height: auto;
+        }
+        .billede h2{padding: 2rem;}
+        main{
+           text-align: center;
+        }
+        .sealle{
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+         @media only screen and (min-width: 600px){
+             .categories{
+                display: grid;
+                grid-template-columns: auto auto;
+                  grid-gap: 5vw;
+                grid-column-gap: 0;
+            }
+              main{
+                text-align: center;
+              padding: 5vw;
+                padding-top: 0;
+                padding-bottom: 2rem;
+            }
+             .billede img{
+                width: 35vw;
+
+            }
+
+        }
+
+
+
+        @media only screen and (min-width: 800px){
+            .splash{margin-top: 148.6px;}
+            .categories{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                  grid-gap: 1vw;
+                grid-column-gap: 0;
+            }
+            main{
+                text-align: center;
+              padding: 18vw;
+                padding-top: 0;
+                padding-bottom: 2rem;
+            }
+            .overlay {
+  position: absolute;
+                width: 20vw;
+                height: 20vw;
+top: 59.6rem;
+left: 18.65vw;
+                opacity: 0;
+  transition: .5s ease;
+  background-color: #000000;
+}
+
+.container:hover .overlay {
+   opacity: 0.7
+}
+            .container:hover .overlay2 {
+  opacity: 0.7
+}
+
+                       .container:hover .overlay3 {
+   opacity: 0.7
+}
+                                .container:hover .overlay4 {
+   opacity: 0.7
+}
+                                .container:hover .overlay5 {
+   opacity: 0.7
+}
+                                           .container:hover .overlay6 {
+   opacity: 0.7
+}
+
+            .billede img{
+                width: 20vw;
+
+            }
+            .overlay2{
+                position: absolute;
+                width: 20vw;
+                height: 20vw;
+top: 59.6rem;
+left: 40vw;
+                opacity: 0;
+  transition: .5s ease;
+
+  background-color: #000000;
+            }
+            .container h2{color: white;
+                padding-top: 7rem;
+            }
+            .overlay3{
+                position: absolute;
+                width: 20vw;
+                height: 20vw;
+top: 59.6rem;
+left: 61.3vw;
+                opacity: 0;
+  transition: .5s ease;
+  background-color: #000000;
+            }
+
+
+                    .overlay4{
+                position: absolute;
+                width: 20vw;
+                height: 20vw;
+top: 78.75rem;
+left: 18.65vw;
+                opacity: 0;
+  transition: .5s ease;
+  background-color: #000000;
+            }
+                    .overlay5{
+                position: absolute;
+                width: 20vw;
+                height: 20vw;
+top: 78.75rem;
+left: 40vw;
+                opacity: 0;
+  transition: .5s ease;
+  background-color: #000000;
+            }
+                                .overlay6{
+                position: absolute;
+                width: 20vw;
+                height: 20vw;
+top: 78.75rem;
+left: 61.3vw;
+                opacity: 0;
+  transition: .5s ease;
+  background-color: #000000;
+            }
+
+        }
+
+
+
+
+    </style>
 </head>
 
 <body>
@@ -41,19 +218,84 @@
             <a href="projects.html">PROJEKTER</a>
             <a href="index.html">LOGO</a>
             <a href="about.html">OM OS</a>
-            <a href="products.html">KONTAKT</a>
+            <a href="contact.html">KONTAKT</a>
         </div>
 
     </header>
+    <div class="splash">
+        <a href="#fyld"><img class="pilned" src="img/splashpil.png"></a>
+    </div>
 
 
 
 
+    <main>
+        <div id="fyld"></div>
+        <div class="Overskrift" id="overskrift"></div>
+        <section class="categories">
+            <div class="billede ringe"></div>
+            <div class="billede vielsesringe"></div>
+            <div class="billede reringe"></div>
+            <div class="billede armbnd"></div>
+            <div class="billede halskder"></div>
+            <div class="billede gave-ideer"></div>
+        </section>
+    </main>
+    <div class="sealle">
+        <a href="smykker.html">SE ALLE</a>
 
-    <main></main>
+    </div>
 
     <footer></footer>
 
 
-    <script src=""></script>
-</body></html>
+    <script>
+        document.addEventListener("DOMContentLoaded", hentJson);
+        //her bliver der sørget for at den går igang med funktionen hentJson2 efter DOM er loaded
+
+
+        let forside;
+        //Her difineres variablen forside
+
+        async function hentJson() {
+            //her startes en async funktion
+            const url = "http://mouad.dk/kea2semester/Eksamen/wordpress//wp-json/wp/v2/forside/18";
+            //her sættes link med rest api ind
+            const myJson = await fetch(url);
+            //her hentes data filen som er lavet i wordpress
+            forside = await myJson.json();
+            //den hentede data skal tolkes som json
+
+            visIndhold();
+            //her kaldes funktion der viser data i DOM
+        };
+
+        function visIndhold() {
+            console.log(forside)
+            //sørger for at funktionen kommer op i console
+            document.querySelector(".splash").innerHTML += `<style>
+        .splash {
+            background-image: url(${forside.splash.guid})
+        }
+    </style>
+`;
+            //Her hentes dataen ned på header tagget
+            document.querySelector(".Overskrift").innerHTML += forside.overskrift;
+            //Her hentes dataen ned på .forsideoverskrift attributten
+            document.querySelector(".ringe").innerHTML += `<div class="container"><img src="${forside.ringe.guid}" alt="Ringe"><div class="overlay"> <h2>Ringe</h2></div></div>`
+            //Her hentes dataen ned på .forsidetekst attributten
+            document.querySelector(".vielsesringe").innerHTML += `<div class="container"><img src="${forside.vielsesringvielsesringee.guid}" alt="Ringe"><div class="overlay2"> <h2>Vielsesringe</h2></div></div>`
+            //Her hentes dataen ned på .forsidetekst2 attributten
+            document.querySelector(".reringe").innerHTML += `<div class="container"><img src="${forside.reringe.guid}" alt="Ringe"><div class="overlay3"> <h2>Øreringe</h2></div></div>`
+            //Her hentes dataen ned på .forsidetekst3 attributten
+            document.querySelector(".armbnd").innerHTML += `<div class="container"><img src="${forside.armbnd.guid}" alt="Ringe"><div class="overlay4"> <h2>Armbånd</h2></div></div>`
+            //Her hentes dataen ned på .forsidetekst4 attributten
+            document.querySelector(".halskder").innerHTML += `<div class="container"><img src="${forside.halskder.guid}" alt="Ringe"><div class="overlay5"> <h2>Halskæde</h2></div></div>`
+            //Her hentes dataen ned på .forsidetekst4 attributten
+            document.querySelector(".gave-ideer").innerHTML += `<div class="container"><img src="${forside.gaveideer.guid}" alt="Ringe"><div class="overlay6"> <h2>Gave-ideer</h2></div></div>`
+            //Her hentes dataen ned på .forsidetekst4 attributten
+        }
+    </script>
+</body>
+
+</html>
