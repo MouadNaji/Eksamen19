@@ -7,6 +7,7 @@
 #burger {
     position: fixed;
     top: -18px;
+
 }
 
 
@@ -133,10 +134,14 @@ body input:checked ~ nav > ul > li {
 
     #desktop_menu {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         margin: auto;
-        padding: 40px 10vw;
+        top: 0;
+        padding: 40px 0vw;
+        width: 100vw;
         background: white;
+        position: fixed;
+        z-index: 100;
 
 
     }
@@ -145,6 +150,7 @@ body input:checked ~ nav > ul > li {
         color: #4D4D4D;
         text-decoration: none;
         font-size: 1rem;
+        margin: 0 5vw;
 
     }
 
