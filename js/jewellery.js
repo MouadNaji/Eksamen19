@@ -160,3 +160,11 @@ function openDesktop(evt, eventName) {
     document.getElementById(eventName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
+function onClick(element) {
+
+
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+}
