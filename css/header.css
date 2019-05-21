@@ -137,7 +137,7 @@ body input:checked ~ nav > ul > li {
         justify-content: center;
         margin: auto;
         top: 0;
-        padding: 40px 0vw;
+        padding: 20px 0vw;
         width: 100vw;
         background: white;
         position: fixed;

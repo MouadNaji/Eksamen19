@@ -177,8 +177,19 @@ span {
 
 @media only screen and (min-width: 800px) {
 
+
+
+
     #jewellery_img {
-        margin-top: 140px;
+        margin-top: 80px;
+        height: 50vh;
+
+    }
+
+
+    #jewellery_img img {
+
+        height: 50vh;
     }
 
     .dropbtn {
