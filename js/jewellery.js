@@ -55,6 +55,8 @@ function openRings() {
 
     document.getElementById("rings").style.display = "block";
 
+    tablinks = document.getElementsByClassName("tablinks");
+
 
 }
 
@@ -139,7 +141,6 @@ function openMobile(evt, eventName) {
     evt.currentTarget.className += " active";
 
     document.getElementById("myDropdown").classList.toggle("show");
-
 
 
 
