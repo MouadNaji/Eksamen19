@@ -1,8 +1,192 @@
+let photo = [];
+let filter = "Ringe"
+
+let destRings = document.querySelector("#ring_insert");
+let destWeddingRings = document.querySelector("#wedding_ring_insert");
+let destEarRings = document.querySelector("#ear_ring_insert");
+let destBracelet = document.querySelector("#bracelet_insert");
+let destNecklace = document.querySelector("#necklace_insert");
+let destGifts = document.querySelector("#gift_insert");
+
+
+
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 
-    chooseCategory();
+    start();
 });
+
+
+
+
+function start() {
+
+    console.log("test");
+
+
+    async function getJson() {
+
+
+        let jsonData = await fetch("http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykker?per_page=100");
+        photos = await jsonData.json();
+        showRings();
+
+    }
+
+
+
+    function showRings() {
+        destRings.innerHTML = "";
+
+
+        photos.forEach(photo => {
+
+            console.log(photo.category);
+
+            if (photo.category == "Ringe") {
+
+
+
+                let template =
+                    `
+
+
+                            <img src="${photo.smykkebillede.guid}"
+                             onclick="onClick(this)"
+
+                            alt="${photo.title.rendered}">
+
+                        </div>
+                        </div>                    `;
+                destRings.insertAdjacentHTML("beforeend", template);
+
+
+
+            }
+
+
+            if (photo.category == "Vielsesringe") {
+
+
+
+                let template =
+                    `
+
+
+                            <img src="${photo.smykkebillede.guid}"
+                             onclick="onClick(this)"
+
+                            alt="${photo.title.rendered}">
+
+                        </div>
+                        </div>                    `;
+                destWeddingRings.insertAdjacentHTML("beforeend", template);
+
+
+
+            }
+
+            if (photo.category == "Øreringe") {
+
+
+
+                let template =
+                    `
+
+
+                            <img src="${photo.smykkebillede.guid}"
+                             onclick="onClick(this)"
+
+                            alt="${photo.title.rendered}">
+
+                        </div>
+                        </div>                    `;
+                destEarRings.insertAdjacentHTML("beforeend", template);
+
+
+
+            }
+            if (photo.category == "Halskæder") {
+
+
+
+                let template =
+                    `
+
+
+                            <img src="${photo.smykkebillede.guid}"
+                             onclick="onClick(this)"
+
+                            alt="${photo.title.rendered}">
+
+                        </div>
+                        </div>                    `;
+                destNecklace.insertAdjacentHTML("beforeend", template);
+
+
+
+            }
+            if (photo.category == "Armbånd") {
+
+
+
+                let template =
+                    `
+
+
+                            <img src="${photo.smykkebillede.guid}"
+                             onclick="onClick(this)"
+
+                            alt="${photo.title.rendered}">
+
+                        </div>
+                        </div>                    `;
+                destBracelet.insertAdjacentHTML("beforeend", template);
+
+
+
+            }
+
+            if (photo.category == "Gaver") {
+
+
+
+                let template =
+                    `
+
+
+                            <img src="${photo.smykkebillede.guid}"
+                             onclick="onClick(this)"
+
+                            alt="${photo.title.rendered}">
+
+                        </div>
+                        </div>                    `;
+                destGifts.insertAdjacentHTML("beforeend", template);
+
+
+
+            }
+
+
+        })
+    }
+
+
+
+
+
+    getJson();
+
+    chooseCategory();
+}
+
+
+
+
+
+
+
 
 
 function chooseCategory() {
