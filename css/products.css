@@ -19,6 +19,8 @@
     width: 80vw;
     display: block;
     margin: 20px auto;
+    height: 80vw;
+
 
 }
 
@@ -29,6 +31,7 @@
 
 #lower_box img {
     width: 80vw;
+    height: 80vw;
     display: block;
     margin: 20px auto;
 
@@ -94,9 +97,11 @@
         width: 50vw;
         height: 50vw;
         ;
-        margin: 0.5vw;
+        margin: 3px;
         position: relative;
 
+        max-width: 600px;
+        max-height: 600px;
 
     }
 
@@ -121,12 +126,15 @@
         width: 24.5vw;
         height: 24.5vw;
 
-        margin: 0.5vw;
+        margin: 3px;
+
+        max-width: 297px;
+        max-height: 297px;
 
     }
 
 
-    .overlay {
+    .overlay_large {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -139,25 +147,58 @@
         background-color: rgba(0, 0, 0, 0.5);
         margin: auto;
 
+        max-width: 600px;
+        max-height: 600px;
+
+
     }
 
-    #large_box:hover .overlay {
+
+    .overlay_small {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: auto;
+
+        max-width: 297px;
+        max-height: 297px;
+
+
+    }
+
+    #large_box:hover .overlay_large {
         opacity: 1;
         width: 50vw;
         height: 50vw;
 
+        max-width: 600px;
+        max-height: 600px;
+
     }
 
-    #small1:hover .overlay {
+    #small1:hover .overlay_small {
         opacity: 1;
         width: 24.5vw;
         height: 24.5vw;
+
+        max-width: 297px;
+        max-height: 297px;
     }
 
-    #small2:hover .overlay {
+    #small2:hover .overlay_small {
         opacity: 1;
         width: 24.5vw;
         height: 24.5vw;
+
+        max-width: 297px;
+        max-height: 297px;
     }
 
 
@@ -171,6 +212,9 @@
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
+        text-transform: uppercase;
+
+
     }
 
 
