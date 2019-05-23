@@ -64,7 +64,7 @@ function showRings() {
 
 <img src="${smykker.kategori_billede.guid}" alt="Ringe">
 
-<div class="overlay">
+<div class="overlay_large">
                     <p class="text">${smykker.title.rendered}</p>
                 </div>`
 
@@ -107,7 +107,7 @@ function showWeddingRings() {
 
 <img src="${smykker.kategori_billede.guid}" alt="Ringe">
 
-<div class="overlay">
+<div class="overlay_small">
                     <p class="text">${smykker.title.rendered}</p>
                 </div>`
 
@@ -160,7 +160,7 @@ function showEarRings() {
 
 <img src="${smykker.kategori_billede.guid}" alt="Ringe">
 
-<div class="overlay">
+<div class="overlay_small">
                     <p class="text">${smykker.title.rendered}</p>
                 </div>`
 
@@ -194,7 +194,7 @@ function showNecklaces() {
 
 <img src="${smykker.kategori_billede.guid}" alt="Ringe">
 
-<div class="overlay">
+<div class="overlay_small">
                     <p class="text">${smykker.title.rendered}</p>
                 </div>`
 
@@ -233,7 +233,7 @@ function showBracelets() {
 
 <img src="${smykker.kategori_billede.guid}" alt="Ringe">
 
-<div class="overlay">
+<div class="overlay_large">
                     <p class="text">${smykker.title.rendered}</p>
                 </div>`
 
@@ -269,7 +269,7 @@ function showGifts() {
 
 <img src="${smykker.kategori_billede.guid}" alt="Ringe">
 
-<div class="overlay">
+<div class="overlay_small">
                     <p class="text">${smykker.title.rendered}</p>
                 </div>`
 

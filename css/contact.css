@@ -3,6 +3,16 @@
     text-align: center;
 }
 
+#contact_img {
+    text-align: center;
+}
+
+
+#contact_img img {
+    width: 80vw;
+
+}
+
 #contact_box {
     display: flex;
     flex-direction: column-reverse;
@@ -30,6 +40,11 @@
 
 }
 
+#contact_box #map {
+
+    text-align: center;
+}
+
 
 #social_box p {
     width: 80vw;
@@ -39,10 +54,23 @@
 
 @media only screen and (min-width: 800px) {
 
+
+
     #contact_title {
         margin-top: 200px;
 
         margin-bottom: 50px;
+    }
+
+    #contact_img img {
+        width: 780px;
+        height: 400px;
+        margin-bottom: 60px;
+    }
+
+    #contact_img img {
+        object-fit: cover;
+
     }
 
     #contact_box {
@@ -53,18 +81,33 @@
     }
 
     #contact_box img {
-        width: 400px;
+        width: 380px;
         height: 500px;
         margin: 10px;
+        object-fit: cover;
+
 
     }
 
-    #contact_box p {
+    #contact_box #text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 10px;
+
+
+
+    }
+
+
+    #contact_box #text p {
         text-align: left;
-        margin: 10px;
-        height: 500px;
+        width: 380px;
+        margin: 0;
 
     }
+
+
 
 
     #social_box p {
