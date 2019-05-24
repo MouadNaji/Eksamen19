@@ -1,90 +1,29 @@
-img {
-    width: 100%;
+#indhold img {
+    max-width: 80vw;
+    height: auto;
+    padding: 2rem;
+    padding-left: 0;
 }
 
-#project_post1_container img,
-#project_post2_container img,
-#project_post3_container img,
-#project_post4_container img,
-#project_post5_container img,
-#project_post6_container img,
-#project_post7_container img,
-#project_post8_container img,
-#project_post9_container img {
-    height: 70vw;
-    margin-top: 22vw;
+p {
+    text-align: left;
 }
 
-#project_post1_container,
-#project_post2_container,
-#project_post3_container,
-#project_post4_container,
-#project_post5_container,
-#project_post6_container,
-#project_post7_container,
-#project_post8_container,
-#project_post9_container {
-    width: 70vw;
-    margin: auto;
-}
-
-
-
-#project_post1_title h1,
-#project_post2_title h1,
-#project_post3_title h1,
-#project_post4_title h1,
-#project_post5_title h1,
-#project_post6_title h1,
-#project_post7_title h1,
-#project_post8_title h1,
-#project_post9_title h1 {
-    text-align: center;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+#indhold {
+    padding: 2rem;
+    padding-top: 2rem;
 }
 
 @media only screen and (min-width: 800px) {
-
-    #project_post1_image,
-    #project_post2_image,
-    #project_post3_image,
-    #project_post4_image,
-    #project_post5_image,
-    #project_post6_image,
-    #project_post7_image,
-    #project_post8_image,
-    #project_post9_image {
-        width: 70vw;
-        margin: auto;
-
+    #indhold {
+        padding: 5rem;
+        padding-top: 8rem;
     }
 
-    #project_post1_container img,
-    #project_post2_container img,
-    #project_post3_container img,
-    #project_post4_container img,
-    #project_post5_container img,
-    #project_post6_container img,
-    #project_post7_container img,
-    #project_post8_container img,
-    #project_post9_container img {
-        width: 70vw;
-        height: 60vh;
-        object-fit: cover;
-        object-position: center;
-        margin-top: 10vw;
-    }
-
-    #project_post1_text,
-    #project_post2_text,
-    #project_post3_text,
-    #project_post4_text,
-    #project_post5_text,
-    #project_post6_text,
-    #project_post7_text,
-    #project_post8_text,
-    #project_post9_text {
-        margin-bottom: 3vw;
+    #indhold img {
+        max-width: 50vw;
+        height: auto;
+        padding: 2rem;
+        padding-left: 0;
     }
 }
