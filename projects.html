@@ -41,77 +41,10 @@
     <main>
         <div id="projects_title">
             <h1>SENESTE PROJEKTER</h1>
-        </div>
-        <div id="projects_row1">
-            <div id="project1">
-                <a href="project_post.html">
-                    <img src="img/projects1.jpg" alt="projects1">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
             </div>
-            <div id="project2">
-                <a href="project_post.html">
-                    <img src="img/projects2.jpg" alt="projects2">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
-            </div>
-            <div id="project3">
-                <a href="project_post.html">
-                    <img src="img/projects3.jpg" alt="projects3">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
-            </div>
-        </div>
-        <div id="projects_row2">
-            <div id="project4">
-                <a href="project_post.html">
-                    <img src="img/projects4.jpg" alt="projects4">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
-            </div>
-            <div id="project5">
-                <a href="project_post.html">
-                    <img src="img/projects5.jpg" alt="projects5">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
-            </div>
-            <div id="project6">
-                <a href="project_post.html">
-                    <img src="img/projects6.jpg" alt="projects6">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
-            </div>
-        </div>
-        <div id="projects_row3">
-            <div id="project7">
-                <a href="project_post.html">
-                    <img src="img/projects7.jpg" alt="projects7">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
-            </div>
-            <div id="project8">
-                <a href="project_post.html">
-                    <img src="img/projects8.jpg" alt="projects8">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
-            </div>
-            <div id="project9">
-                <a href="project_post.html">
-                    <img src="img/ring.jpg" alt="projects9">
-                    <h2>PROJEKT TITEL</h2>
-                </a>
-                <p>Projektbeskrivelse med mere...</p>
-            </div>
-        </div>
+            <div id="liste"></div>
     </main>
+
     <footer>
         <div id="footer_box">
             <a href="https://www.facebook.com/frolov.savova/">
@@ -122,5 +55,40 @@
             </a>
         </div>
     </footer>
-    <script src=""></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", start)
+
+        let project;
+        async function start() {
+            const json = await fetch("http://mouad.dk/kea2semester/Eksamen/wordpress//wp-json/wp/v2/projekter");
+            project = await json.json();
+            visProject();
+        }
+
+        let filter = "alle";
+
+
+        function visProject() {
+            let liste = document.querySelector("#liste");
+            liste.innerHTML = "";
+
+            project.forEach(pro => {
+                    let template = `<div class="project"><img id="billede" src=${pro.billede.guid} alt="ret"><h2> ${pro.overskrift}</h2><p>${pro.tekst}</p></div>`
+                    liste.insertAdjacentHTML("beforeend", template);
+
+                    liste.lastElementChild.addEventListener("click", () => {
+                    location.href = "project_post.html?id=" + pro.id;
+
+                    });
+                    });
+
+
+            };
+
+
+
+
+
+
+    </script>
 </body></html>

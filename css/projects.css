@@ -1,35 +1,21 @@
-a {text-decoration: none;
+a {
+    text-decoration: none;
 }
 
-#project1 img,
-#project2 img,
-#project3 img,
-#project4 img,
-#project5 img,
-#project6 img,
-#project7 img,
-#project8 img,
-#project9 img {
+.project img {
     width: 70vw;
     height: 70vw;
     object-fit: cover;
 }
 
-#project1,
-#project2,
-#project3,
-#project4,
-#project5,
-#project6,
-#project7,
-#project8,
-#project9 {
+
+.project {
     text-align: center;
-    margin-bottom: 20vw;
+    margin-bottom: 1rem;
 }
 
 #projects_title {
-    margin-top: 130px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -37,43 +23,69 @@ a {text-decoration: none;
     margin-bottom: 10vw;
 }
 
+
+@media only screen and (min-width: 600px) {
+    #liste {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 1vw;
+        grid-column-gap: 0;
+    }
+
+    main {
+        text-align: center;
+        padding: 12vw;
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    .project img {
+        width: 35vw;
+        height: 35vw;
+
+    }
+
+}
+
 @media only screen and (min-width: 800px) {
+    #projects_title {
+        margin-top: 130px;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .project p {
+        max-width: 22vw;
+    }
+
     #projects_title h1 {
         margin-bottom: 5vw;
     }
 
-    #projects_row1,
-    #projects_row2,
-    #projects_row3 {
+    main {
+        text-align: center;
+        padding: 14vw;
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    #liste {
         display: grid;
-        width: 80vw;
-        margin: auto;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto;
+        grid-gap: 1vw;
+        grid-column-gap: 1;
     }
 
-    #project1,
-    #project2,
-    #project3,
-    #project4,
-    #project5,
-    #project6,
-    #project7,
-    #project8,
-    #project9 {
-        margin-bottom: 8vw;
+
+    .project {
+        margin-bottom: 2vw;
     }
 
 
 
-    #project1 img,
-    #project2 img,
-    #project3 img,
-    #project4 img,
-    #project5 img,
-    #project6 img,
-    #project7 img,
-    #project8 img,
-    #project9 img {
+    .project img {
         width: 22vw;
         height: 22vw;
     }
