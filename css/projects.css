@@ -28,13 +28,13 @@ a {
     #liste {
         display: grid;
         grid-template-columns: auto auto;
-        grid-gap: 5vw;
+        grid-gap: 1vw;
         grid-column-gap: 0;
     }
 
     main {
         text-align: center;
-        padding: 5vw;
+        padding: 12vw;
         padding-top: 0;
         padding-bottom: 2rem;
     }
@@ -56,6 +56,9 @@ a {
 
 
 @media only screen and (min-width: 1000px) {
+    .project p {
+        max-width: 22vw;
+    }
 
     #projects_title h1 {
         margin-bottom: 5vw;
@@ -63,7 +66,7 @@ a {
 
     main {
         text-align: center;
-        padding: 18vw;
+        padding: 14vw;
         padding-top: 0;
         padding-bottom: 2rem;
     }
