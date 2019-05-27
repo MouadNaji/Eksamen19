@@ -48,15 +48,18 @@
         </div>
 
     </header>
-    <div class="splash">
-        <a href="#fyld"><img class="pilned" src="img/splashpil.png"></a>
-    </div>
+
+    <video class="splash" autoplay loop>
+        <source src="http://mouad.dk/kea2semester/Eksamen/wordpress/wp-content/uploads/2019/05/Splash.mp4" type="video/mp4">
+    </video>
+    <a href="#overskrift"><img class="pilned" src="img/splashpil.png"></a>
+
+
 
 
 
 
     <main>
-        <div id="fyld"></div>
         <div class="Overskrift" id="overskrift"></div>
         <section class="categories">
             <a href="jewellery.html">
@@ -110,13 +113,10 @@
 
         function visIndhold() {
             console.log(forside)
-            //sørger for at funktionen kommer op i console
-            document.querySelector(".splash").innerHTML += `<style>
-        .splash {
-            background-image: url(${forside.splash.guid})
-        }
-    </style>
-`;
+
+            http: //mouad.dk/kea2semester/Eksamen/wordpress/wp-content/uploads/2019/05/Splash.mp4
+                //sørger for at funktionen kommer op i console
+                document.querySelector(".splash").innerHTML += ``;
             //Her hentes dataen ned på header tagget
             document.querySelector(".Overskrift").innerHTML += forside.overskrift;
             //Her hentes dataen ned på .forsideoverskrift attributten
@@ -133,6 +133,7 @@
             document.querySelector(".gave-ideer").innerHTML += `<div class="container"><img src="${forside.gaveideer.guid}" alt="Ringe"><div class="overlay6"> <h2 >Gave-ideer</h2></div></div>`
             //Her hentes dataen ned på .forsidetekst4 attributten
         }
+
     </script>
 </body>
 
