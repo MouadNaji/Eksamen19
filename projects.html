@@ -13,82 +13,60 @@
 </head>
 
 <body>
-    <header>
-        <div id="burger_display">
-            <input id="burger" type="checkbox" />
-            <label for="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <nav>
-                <ul>
-                    <li><a href="products.html">SMYKKER</a></li>
-                    <li><a href="projects.html">PROJEKTER</a></li>
-                    <li><a href="about.html">OM OS</a></li>
-                    <li><a href="contact.html">KONTAKT</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="desktop_menu">
-            <a href="products.html">SMYKKER</a>
-            <a href="projects.html">PROJEKTER</a>
-            <a href="index.html">LOGO</a>
-            <a href="about.html">OM OS</a>
-            <a href="products.html">KONTAKT</a>
-        </div>
-    </header>
-    <main>
-        <div id="projects_title">
-            <h1>SENESTE PROJEKTER</h1>
+    <div class="fade_in">
+
+        <header>
+
+            <div id="burger_display">
+                <input id="burger" type="checkbox" />
+
+
+                <label for="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav>
+                    <ul>
+                        <li><a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div id="desktop_menu">
+                <a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a>
+                <a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a>
+                <a onclick="transitionOut()" href="javascript:delay('index.html')">LOGO</a>
+                <a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a>
+                <a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a>
+            </div>
+
+        </header>
+        <main>
+            <div id="projects_title">
+                <h1>SENESTE PROJEKTER</h1>
             </div>
             <div id="liste"></div>
-    </main>
+        </main>
 
-    <footer>
-        <div id="footer_box">
-            <a href="https://www.facebook.com/frolov.savova/">
-                <img src="img/facebook.svg" alt="Facebook icon">
-            </a>
-            <a href="https://www.instagram.com/frolov_savova_jewelry/">
-                <img src="img/instagram.svg" alt="Instagram icon">
-            </a>
-        </div>
-    </footer>
-    <script>
-    document.addEventListener("DOMContentLoaded", start)
+        <footer>
+            <div id="footer_box">
+                <a href="https://www.facebook.com/frolov.savova/">
+                    <img src="img/facebook.svg" alt="Facebook icon">
+                </a>
+                <a href="https://www.instagram.com/frolov_savova_jewelry/">
+                    <img src="img/instagram.svg" alt="Instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
 
-        let project;
-        async function start() {
-            const json = await fetch("http://mouad.dk/kea2semester/Eksamen/wordpress//wp-json/wp/v2/projekter");
-            project = await json.json();
-            visProject();
-        }
+    <script src="js/projects.js"></script>
+    <script src="js/transition.js"></script>
 
-        let filter = "alle";
-
-
-        function visProject() {
-            let liste = document.querySelector("#liste");
-            liste.innerHTML = "";
-
-            project.forEach(pro => {
-                    let template = `<div class="project"><img id="billede" src=${pro.billede.guid} alt="ret"><h2> ${pro.overskrift}</h2><p>${pro.tekst}</p></div>`
-                    liste.insertAdjacentHTML("beforeend", template);
-
-                    liste.lastElementChild.addEventListener("click", () => {
-                    location.href = "project_post.html?id=" + pro.id;
-
-                    });
-                    });
-
-
-            };
-
-
-
-
-
-
-    </script>
 </body></html>

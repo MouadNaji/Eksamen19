@@ -37,3 +37,41 @@ p {
 h1 {
     font-size: 3rem;
 }
+
+
+
+/*fadein/fade out*/
+
+
+@keyframes fade_out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fade_in {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+.fade_out {
+    animation: fade_out 0.9s 1;
+}
+
+.fade_in {
+
+    animation: fade_in 2s 1;
+
+}

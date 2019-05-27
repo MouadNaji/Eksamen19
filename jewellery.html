@@ -12,157 +12,161 @@
 
 </head>
 
-
-<header>
-
-    <div id="burger_display">
-        <input id="burger" type="checkbox" />
-
-
-        <label for="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-
-        <nav>
-            <ul>
-                <li><a href="products.html">SMYKKER</a></li>
-                <li><a href="projects.html">PROJEKTER</a></li>
-                <li><a href="about.html">OM OS</a></li>
-                <li><a href="contact.html">KONTAKT</a></li>
-            </ul>
-        </nav>
-    </div>
-
-
-    <div id="desktop_menu">
-        <a href="products.html">SMYKKER</a>
-        <a href="projects.html">PROJEKTER</a>
-        <a href="index.html">LOGO</a>
-        <a href="about.html">OM OS</a>
-        <a href="products.html">KONTAKT</a>
-    </div>
-
-</header>
-
-
-<main>
-
-    <div id="jewellery_img">
-
-        <img src="img/index1.jpg" alt="">
-    </div>
-
-    <div class="dropdown">
-        <button onclick="myMobileFunction()" class="dropbtn">ALLE SMYKKER</button>
-        <div id="myDropdown" class="dropdown-content">
-
-            <button class="tablinks" onclick="openMobile(event, 'rings')">RINGE</button>
-            <button class="tablinks" onclick="openMobile(event, 'wedding_rings')">VIELSESRINGE</button>
-            <button class="tablinks" onclick="openMobile(event, 'ear_rings')">ØRERINGE</button>
-            <button class="tablinks" onclick="openMobile(event, 'necklaces')">HALSKÆDER</button>
-            <button class="tablinks" onclick="openMobile(event, 'bracelets')">ARMBÅND</button>
-            <button class="tablinks" onclick="openMobile(event, 'gifts')">GAVE-IDEER</button>
-        </div>
-    </div>
-
-    <div id="product_tab">
-        <div class="tab">
-            <button class="tablinks" onclick="openDesktop(event, 'rings')">RINGE</button>
-            <button class="tablinks" onclick="openDesktop(event, 'wedding_rings')">VIELSESRINGE</button>
-            <button class="tablinks" onclick="openDesktop(event, 'ear_rings')">ØRERINGE</button>
-            <button class="tablinks" onclick="openDesktop(event, 'necklaces')">HALSKÆDER</button>
-            <button class="tablinks" onclick="openDesktop(event, 'bracelets')">ARMBÅND</button>
-            <button class="tablinks" onclick="openDesktop(event, 'gifts')">GAVE-IDEER</button>
-        </div>
-    </div>
-
-    <div id="rings" class="tabcontent">
-
-
-        <div id="ring_insert" class="top">
-
-        </div>
-
-
-
-    </div>
-
-    <div id="wedding_rings" class="tabcontent">
-        <div id="wedding_ring_insert" class="top">
-
-        </div>
-
-
-    </div>
-
-    <div id="ear_rings" class="tabcontent">
-        <div id="ear_ring_insert" class="top">
-
-
-        </div>
-
-
-    </div>
-
-    <div id="necklaces" class="tabcontent">
-        <div id="necklace_insert" class="top">
-
-
-        </div>
-
-
-    </div>
-
-    <div id="bracelets" class="tabcontent">
-        <div id="bracelet_insert" class="top">
-
-        </div>
-
-
-    </div>
-
-    <div id="gifts" class="tabcontent">
-        <div id="gift_insert" class="top">
-
-
-
-        </div>
-
-
-    </div>
-
-
-    <div id="modal01" class="w3-modal" onclick="offClick(this)">
-        <span>&times;</span>
-        <div class="w3-modal-content w3-animate-opacity">
-            <img id="img01">
-        </div>
-    </div>
-
-
-
-
-</main>
-
-
-<footer>
-
-    <div id="footer_box">
-        <a href="https://www.facebook.com/frolov.savova/">
-
-            <img src="img/facebook.svg" alt="Facebook icon">
-        </a>
-
-        <a href="https://www.instagram.com/frolov_savova_jewelry/">
-            <img src="img/instagram.svg" alt="Instagram icon">
-        </a>
-    </div>
-</footer>
-
 <body>
-    <script src="js/jewellery.js"></script>
-</body>
 
-</html>
+    <div class="fade_in">
+
+        <header>
+
+            <div id="burger_display">
+                <input id="burger" type="checkbox" />
+
+
+                <label for="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav>
+                    <ul>
+                        <li><a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div id="desktop_menu">
+                <a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a>
+                <a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a>
+                <a onclick="transitionOut()" href="javascript:delay('index.html')">LOGO</a>
+                <a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a>
+                <a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a>
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <div id="jewellery_img">
+
+                <img src="img/index1.jpg" alt="">
+            </div>
+
+            <div class="dropdown">
+                <button onclick="myMobileFunction()" class="dropbtn">ALLE SMYKKER</button>
+                <div id="myDropdown" class="dropdown-content">
+
+                    <button class="tablinks" onclick="openMobile(event, 'rings')">RINGE</button>
+                    <button class="tablinks" onclick="openMobile(event, 'wedding_rings')">VIELSESRINGE</button>
+                    <button class="tablinks" onclick="openMobile(event, 'ear_rings')">ØRERINGE</button>
+                    <button class="tablinks" onclick="openMobile(event, 'necklaces')">HALSKÆDER</button>
+                    <button class="tablinks" onclick="openMobile(event, 'bracelets')">ARMBÅND</button>
+                    <button class="tablinks" onclick="openMobile(event, 'gifts')">GAVE-IDEER</button>
+                </div>
+            </div>
+
+            <div id="product_tab">
+                <div class="tab">
+                    <button class="tablinks" onclick="openDesktop(event, 'rings')">RINGE</button>
+                    <button class="tablinks" onclick="openDesktop(event, 'wedding_rings')">VIELSESRINGE</button>
+                    <button class="tablinks" onclick="openDesktop(event, 'ear_rings')">ØRERINGE</button>
+                    <button class="tablinks" onclick="openDesktop(event, 'necklaces')">HALSKÆDER</button>
+                    <button class="tablinks" onclick="openDesktop(event, 'bracelets')">ARMBÅND</button>
+                    <button class="tablinks" onclick="openDesktop(event, 'gifts')">GAVE-IDEER</button>
+                </div>
+            </div>
+
+            <div id="rings" class="tabcontent">
+
+
+                <div id="ring_insert" class="top">
+
+                </div>
+
+
+
+            </div>
+
+            <div id="wedding_rings" class="tabcontent">
+                <div id="wedding_ring_insert" class="top">
+
+                </div>
+
+
+            </div>
+
+            <div id="ear_rings" class="tabcontent">
+                <div id="ear_ring_insert" class="top">
+
+
+                </div>
+
+
+            </div>
+
+            <div id="necklaces" class="tabcontent">
+                <div id="necklace_insert" class="top">
+
+
+                </div>
+
+
+            </div>
+
+            <div id="bracelets" class="tabcontent">
+                <div id="bracelet_insert" class="top">
+
+                </div>
+
+
+            </div>
+
+            <div id="gifts" class="tabcontent">
+                <div id="gift_insert" class="top">
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <div id="modal01" class="w3-modal" onclick="offClick(this)">
+                <span>&times;</span>
+                <div class="w3-modal-content w3-animate-opacity">
+                    <img id="img01">
+                </div>
+            </div>
+
+
+
+
+        </main>
+
+
+        <footer>
+
+            <div id="footer_box">
+                <a href="https://www.facebook.com/frolov.savova/">
+
+                    <img src="img/facebook.svg" alt="Facebook icon">
+                </a>
+
+                <a href="https://www.instagram.com/frolov_savova_jewelry/">
+                    <img src="img/instagram.svg" alt="Instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jewellery.js"></script>
+    <script src="js/transition.js"></script>
+
+
+</body></html>
+

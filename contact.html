@@ -13,78 +13,81 @@
 
 <body>
 
-    <header>
+    <div class="fade_in">
 
-        <div id="burger_display">
-            <input id="burger" type="checkbox" />
+        <header>
 
-
-            <label for="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <nav>
-                <ul>
-                    <li><a href="products.html">SMYKKER</a></li>
-                    <li><a href="projects.html">PROJEKTER</a></li>
-                    <li><a href="about.html">OM OS</a></li>
-                    <li><a href="contact.html">KONTAKT</a></li>
-                </ul>
-            </nav>
-        </div>
+            <div id="burger_display">
+                <input id="burger" type="checkbox" />
 
 
-        <div id="desktop_menu">
-            <a href="products.html">SMYKKER</a>
-            <a href="projects.html">PROJEKTER</a>
-            <a href="index.html">LOGO</a>
-            <a href="about.html">OM OS</a>
-            <a href="products.html">KONTAKT</a>
-        </div>
+                <label for="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav>
+                    <ul>
+                        <li><a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a></li>
+                        <li><a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div id="desktop_menu">
+                <a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a>
+                <a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a>
+                <a onclick="transitionOut()" href="javascript:delay('index.html')">LOGO</a>
+                <a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a>
+                <a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a>
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <div id="contact_title">
+            </div>
+
+            <div id="contact_img">
+            </div>
+
+            <div id="contact_box">
+
+                <div id="map"></div>
+                <div id="text"></div>
 
 
 
-    </header>
+            </div>
 
+            <div id="social_box">
 
-    <main>
+            </div>
+        </main>
 
-        <div id="contact_title">
-        </div>
+        <footer>
 
-        <div id="contact_img">
-        </div>
+            <div id="footer_box">
+                <a href="https://www.facebook.com/frolov.savova/">
 
-        <div id="contact_box">
+                    <img src="img/facebook.svg" alt="Facebook icon">
+                </a>
 
-            <div id="map"></div>
-            <div id="text"></div>
+                <a href="https://www.instagram.com/frolov_savova_jewelry/">
+                    <img src="img/instagram.svg" alt="Instagram icon">
+                </a>
+            </div>
+        </footer>
 
-
-
-        </div>
-
-        <div id="social_box">
-
-        </div>
-    </main>
-
-    <footer>
-
-        <div id="footer_box">
-            <a href="https://www.facebook.com/frolov.savova/">
-
-                <img src="img/facebook.svg" alt="Facebook icon">
-            </a>
-
-            <a href="https://www.instagram.com/frolov_savova_jewelry/">
-                <img src="img/instagram.svg" alt="Instagram icon">
-            </a>
-        </div>
-    </footer>
-
+    </div>
 
     <script src="js/contact.js"></script>
+    <script src="js/transition.js"></script>
+
 </body></html>
