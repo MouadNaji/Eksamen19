@@ -60,26 +60,10 @@
 
 
     <main>
-        <div class="Overskrift" id="overskrift"></div>
-        <section class="categories">
-            <a href="jewellery.html">
-                <div class="billede ringe"></div>
-            </a>
-            <a href="jewellery.html">
-                <div class="billede vielsesringe"></div>
-            </a>
-            <a href="jewellery.html">
-                <div class="billede reringe"></div>
-            </a>
-            <a href="jewellery.html">
-                <div class="billede armbnd"></div>
-            </a>
-            <a href="jewellery.html">
-                <div class="billede halskder"></div>
-            </a>
-            <a href="jewellery.html">
-                <div class="billede gave-ideer"></div>
-            </a>
+        <div class="Overskrift" id="overskrift">
+            <h1>NYESTE SMYKKER</h1>
+        </div>
+        <section id="liste">
         </section>
     </main>
     <div class="sealle">
@@ -91,49 +75,29 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", hentJson);
-        //her bliver der sørget for at den går igang med funktionen hentJson2 efter DOM er loaded
+        document.addEventListener("DOMContentLoaded", start)
 
-
-        let forside;
-        //Her difineres variablen forside
-
-        async function hentJson() {
-            //her startes en async funktion
-            const url = "http://mouad.dk/kea2semester/Eksamen/wordpress//wp-json/wp/v2/forside/18";
-            //her sættes link med rest api ind
-            const myJson = await fetch(url);
-            //her hentes data filen som er lavet i wordpress
-            forside = await myJson.json();
-            //den hentede data skal tolkes som json
-
-            visIndhold();
-            //her kaldes funktion der viser data i DOM
-        };
-
-        function visIndhold() {
-            console.log(forside)
-
-            http: //mouad.dk/kea2semester/Eksamen/wordpress/wp-content/uploads/2019/05/Splash.mp4
-                //sørger for at funktionen kommer op i console
-                document.querySelector(".splash").innerHTML += ``;
-            //Her hentes dataen ned på header tagget
-            document.querySelector(".Overskrift").innerHTML += forside.overskrift;
-            //Her hentes dataen ned på .forsideoverskrift attributten
-            document.querySelector(".ringe").innerHTML += `<div class="container"><img src="${forside.ringe.guid}" alt="Ringe"><div class="overlay"> <h2 ">Ringe</h2></div></div>`
-            //Her hentes dataen ned på .forsidetekst attributten
-            document.querySelector(".vielsesringe").innerHTML += `<div class="container"><img src="${forside.vielsesringvielsesringee.guid}" alt="Ringe"><div class="overlay2"> <h2 >Vielsesringe</h2></div></div>`
-            //Her hentes dataen ned på .forsidetekst2 attributten
-            document.querySelector(".reringe").innerHTML += `<div class="container"><img src="${forside.reringe.guid}" alt="Ringe"><div class="overlay3"> <h2 >Øreringe</h2></div></div>`
-            //Her hentes dataen ned på .forsidetekst3 attributten
-            document.querySelector(".armbnd").innerHTML += `<div class="container"><img src="${forside.armbnd.guid}" alt="Ringe"><div class="overlay4"> <h2 >Armbånd</h2></div></div>`
-            //Her hentes dataen ned på .forsidetekst4 attributten
-            document.querySelector(".halskder").innerHTML += `<div class="container"><img src="${forside.halskder.guid}" alt="Ringe"><div class="overlay5"> <h2 >Halskæde</h2></div></div>`
-            //Her hentes dataen ned på .forsidetekst4 attributten
-            document.querySelector(".gave-ideer").innerHTML += `<div class="container"><img src="${forside.gaveideer.guid}" alt="Ringe"><div class="overlay6"> <h2 >Gave-ideer</h2></div></div>`
-            //Her hentes dataen ned på .forsidetekst4 attributten
+        let project;
+        async function start() {
+            const json = await fetch("http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykker?per_page=6");
+            project = await json.json();
+            visProject();
         }
 
+        let filter = "alle";
+
+
+        function visProject() {
+            let liste = document.querySelector("#liste");
+            liste.innerHTML = "";
+
+            project.forEach(pro => {
+                let template = `<div class="project"><img id="billede" src=${pro.smykkebillede.guid} alt="ret"><h2> ${pro.title.rendered}</h2></div>`
+                liste.insertAdjacentHTML("beforeend", template);
+            });
+
+
+        };
     </script>
 </body>
 
