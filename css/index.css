@@ -127,8 +127,7 @@
                 width: 5rem;
                 height: auto;
                 top: 50vw;
-                left: 48%;
-                right: 48%;
+
 
             }
 
@@ -142,27 +141,36 @@
 
             .padding {
                 text-align: center;
-                padding: 14vw;
-                padding-top: 0;
+                padding: 0;
                 padding-bottom: 2rem;
+                width: 80vw;
+                margin: auto;
+
             }
 
             #liste {
                 display: grid;
                 grid-template-columns: auto auto auto;
-                grid-gap: 1vw;
-                grid-column-gap: 1;
+                grid-gap: 0;
+                grid-column-gap: 0;
+                justify-content: center;
+
             }
 
 
             .project {
-                margin-bottom: 2vw;
+                margin-bottom: 0vw;
+                height: 20vw;
+                width: 20vw;
+                padding: 10px;
+
             }
 
 
-
             .project img {
-                width: 22vw;
-                height: 22vw;
+                height: 20vw;
+                width: 20vw;
+                object-fit: cover;
+
             }
         }

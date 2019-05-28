@@ -2,6 +2,37 @@ a {
     text-decoration: none;
 }
 
+.project p {
+    width: 80vw;
+    margin: auto;
+    display: none;
+}
+
+.project h2:nth-child(1) {
+    display: block;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+
+}
+
+.project p:nth-child(4) {
+    display: block;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+
+
+}
+
 .project img {
     width: 70vw;
     height: 70vw;
@@ -58,9 +89,7 @@ a {
 
 
 @media only screen and (min-width: 1000px) {
-    .project p {
-        max-width: 22vw;
-    }
+
 
     #projects_title h1 {
         margin-bottom: 5vw;
@@ -76,19 +105,34 @@ a {
     #liste {
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-gap: 1vw;
         grid-column-gap: 1;
+        justify-content: center;
     }
 
 
     .project {
-        margin-bottom: 2vw;
+        height: auto;
+        cursor: pointer;
     }
 
 
 
     .project img {
-        width: 22vw;
-        height: 22vw;
+        width: 20vw;
+        height: 20vw;
+        object-fit: cover;
+        margin-bottom: 10px;
+
     }
+
+    .project p {
+        display: none;
+        width: auto;
+        text-align: left;
+
+    }
+
+
+
+
 }

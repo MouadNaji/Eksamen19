@@ -2,6 +2,8 @@
 <html lang="da">
 
 <head>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om os</title>
@@ -29,6 +31,10 @@
 
             <nav>
                 <ul>
+
+                    <li><a onclick="transitionOut()" href="javascript:delay('index.html')">
+                            <div id="logo"><img src="img/logo.svg" alt=""></div>
+                        </a></li>
                     <li><a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a></li>
                     <li><a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a></li>
                     <li><a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a></li>
@@ -41,7 +47,9 @@
         <div id="desktop_menu">
             <a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a>
             <a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a>
-            <a onclick="transitionOut()" href="javascript:delay('index.html')">LOGO</a>
+            <a onclick="transitionOut()" href="javascript:delay('index.html')">
+                <div id="logo"><img src="img/logo.svg" alt=""></div>
+            </a>
             <a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a>
             <a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a>
         </div>
@@ -96,4 +104,6 @@
     </script>
     <script src="js/transition.js"></script>
 
-</body></html>
+</body>
+
+</html>
