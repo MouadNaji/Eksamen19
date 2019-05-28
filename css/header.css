@@ -142,6 +142,7 @@ body input:checked ~ nav > ul > li {
         background: white;
         position: fixed;
         z-index: 100;
+        box-shadow: black 0 -70px 100px;
 
 
     }

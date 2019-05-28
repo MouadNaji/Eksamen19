@@ -237,6 +237,9 @@ function chooseCategory() {
 function openRings() {
     console.log("rings");
 
+    document.querySelector(".ringlink").classList.add("active");
+
+
     document.getElementById("rings").style.display = "block";
 
     tablinks = document.getElementsByClassName("tablinks");
@@ -248,6 +251,9 @@ function openRings() {
 function openWeddingRings() {
     console.log("weddingrings");
 
+    document.querySelector(".weddingringlink").classList.add("active");
+
+
     document.getElementById("wedding_rings").style.display = "block";
 
 
@@ -255,6 +261,8 @@ function openWeddingRings() {
 
 function openEarRings() {
     console.log("earrings");
+
+    document.querySelector(".earringlink").classList.add("active");
 
     document.getElementById("ear_rings").style.display = "block";
 
@@ -264,6 +272,8 @@ function openEarRings() {
 function openBracelets() {
     console.log("bracelets");
 
+    document.querySelector(".braceletlink").classList.add("active");
+
     document.getElementById("bracelets").style.display = "block";
 
 
@@ -272,6 +282,8 @@ function openBracelets() {
 function openNecklaces() {
     console.log("necklaces");
 
+    document.querySelector(".necklacelink").classList.add("active");
+
     document.getElementById("necklaces").style.display = "block";
 
 
@@ -279,6 +291,8 @@ function openNecklaces() {
 
 function openGifts() {
     console.log("gifts");
+
+    document.querySelector(".giftlink").classList.add("active");
 
     document.getElementById("gifts").style.display = "block";
 

@@ -8,6 +8,6 @@ function delay(URL) {
 
 function transitionOut() {
 
-    document.querySelector("body").classList.add("fade_out");
+    document.querySelector("main").classList.add("fade_out");
 
 }

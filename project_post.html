@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frolov og Savova｜Projekter</title>
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -28,46 +27,48 @@
 
             <nav>
                 <ul>
-                    <li><a href="products.html">SMYKKER</a></li>
-                    <li><a href="projects.html">PROJEKTER</a></li>
-                    <li><a href="about.html">OM OS</a></li>
-                    <li><a href="contact.html">KONTAKT</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a></li>
                 </ul>
             </nav>
         </div>
 
 
         <div id="desktop_menu">
-            <a href="products.html">SMYKKER</a>
-            <a href="projects.html">PROJEKTER</a>
-            <a href="index.html">LOGO</a>
-            <a href="about.html">OM OS</a>
-            <a href="products.html">KONTAKT</a>
+            <a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a>
+            <a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a>
+            <a onclick="transitionOut()" href="javascript:delay('index.html')">LOGO</a>
+            <a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a>
+            <a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a>
         </div>
 
     </header>
 
-    <main>
-        <div id="indhold">
-            <div id="tilbage"></div>
+    <div class="fade_in">
+
+        <main>
+            <div id="indhold">
+                <div id="tilbage"></div>
 
 
-        </div>
-    </main>
-    <footer>
-        <div id="footer_box">
-            <a href="https://www.facebook.com/frolov.savova/">
+            </div>
+        </main>
+        <footer>
+            <div id="footer_box">
+                <a href="https://www.facebook.com/frolov.savova/">
 
-                <img src="img/facebook.svg" alt="Facebook icon">
-            </a>
+                    <img src="img/facebook.svg" alt="Facebook icon">
+                </a>
 
-            <a href="https://www.instagram.com/frolov_savova_jewelry/">
-                <img src="img/instagram.svg" alt="Instagram icon">
-            </a>
-        </div>
-    </footer>
+                <a href="https://www.instagram.com/frolov_savova_jewelry/">
+                    <img src="img/instagram.svg" alt="Instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
 
     <script src="js/project_post.js"></script>
     <script src="js/transition.js"></script>
-
 </body></html>

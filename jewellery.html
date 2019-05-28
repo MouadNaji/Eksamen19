@@ -14,41 +14,41 @@
 
 <body>
 
+
+    <header>
+
+        <div id="burger_display">
+            <input id="burger" type="checkbox" />
+
+
+            <label for="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav>
+                <ul>
+                    <li><a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div id="desktop_menu">
+            <a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a>
+            <a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a>
+            <a onclick="transitionOut()" href="javascript:delay('index.html')">LOGO</a>
+            <a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a>
+            <a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a>
+        </div>
+
+    </header>
+
     <div class="fade_in">
-
-        <header>
-
-            <div id="burger_display">
-                <input id="burger" type="checkbox" />
-
-
-                <label for="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-
-                <nav>
-                    <ul>
-                        <li><a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a></li>
-                        <li><a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a></li>
-                        <li><a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a></li>
-                        <li><a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-
-            <div id="desktop_menu">
-                <a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a>
-                <a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a>
-                <a onclick="transitionOut()" href="javascript:delay('index.html')">LOGO</a>
-                <a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a>
-                <a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a>
-            </div>
-
-        </header>
-
 
         <main>
 
@@ -72,12 +72,12 @@
 
             <div id="product_tab">
                 <div class="tab">
-                    <button class="tablinks" onclick="openDesktop(event, 'rings')">RINGE</button>
-                    <button class="tablinks" onclick="openDesktop(event, 'wedding_rings')">VIELSESRINGE</button>
-                    <button class="tablinks" onclick="openDesktop(event, 'ear_rings')">ØRERINGE</button>
-                    <button class="tablinks" onclick="openDesktop(event, 'necklaces')">HALSKÆDER</button>
-                    <button class="tablinks" onclick="openDesktop(event, 'bracelets')">ARMBÅND</button>
-                    <button class="tablinks" onclick="openDesktop(event, 'gifts')">GAVE-IDEER</button>
+                    <button class="ringlink tablinks" onclick="openDesktop(event, 'rings')">RINGE</button>
+                    <button class="weddingringlink tablinks" onclick="openDesktop(event, 'wedding_rings')">VIELSESRINGE</button>
+                    <button class="earringlink tablinks" onclick="openDesktop(event, 'ear_rings')">ØRERINGE</button>
+                    <button class="necklacelink tablinks" onclick="openDesktop(event, 'necklaces')">HALSKÆDER</button>
+                    <button class="braceletlink tablinks" onclick="openDesktop(event, 'bracelets')">ARMBÅND</button>
+                    <button class="giftlink tablinks" onclick="openDesktop(event, 'gifts')">GAVE-IDEER</button>
                 </div>
             </div>
 
@@ -168,5 +168,6 @@
     <script src="js/transition.js"></script>
 
 
-</body></html>
+</body>
 
+</html>
