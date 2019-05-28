@@ -1,3 +1,18 @@
+/*////////////////////////////////////////////////////////////////////////////////////Logo///////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#logo {
+    margin: 0;
+    height: 80px;
+}
+
+#logo img {
+    height: 80px;
+    margin: 0;
+
+}
+
+
 /*////////////////////////////////////////////////////////////////////////////////////Burger_menu///////////////////////////////////////////////////////////////////////////////////////*/
 
 #desktop_menu {
@@ -137,7 +152,7 @@ body input:checked ~ nav > ul > li {
         justify-content: center;
         margin: auto;
         top: 0;
-        padding: 20px 0vw;
+        padding: 0;
         width: 100vw;
         background: white;
         position: fixed;
@@ -145,13 +160,24 @@ body input:checked ~ nav > ul > li {
         box-shadow: black 0 -70px 100px;
 
 
+
     }
 
     #desktop_menu a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         color: #4D4D4D;
         text-decoration: none;
         font-size: 1rem;
         margin: 0 5vw;
+        color: #9e8555;
+        letter-spacing: 1px;
+        padding: 20px 0;
+
+
+
+
 
     }
 
