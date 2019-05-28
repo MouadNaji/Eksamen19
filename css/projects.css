@@ -59,7 +59,6 @@ a {
     #liste {
         display: grid;
         grid-template-columns: auto auto;
-        grid-gap: 1vw;
         grid-column-gap: 0;
     }
 
@@ -105,7 +104,7 @@ a {
     #liste {
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-column-gap: 1;
+        grid-column-gap: 0;
         justify-content: center;
     }
 
@@ -113,6 +112,8 @@ a {
     .project {
         height: auto;
         cursor: pointer;
+        margin: 10px;
+        padding: 20px;
     }
 
 
@@ -122,6 +123,20 @@ a {
         height: 20vw;
         object-fit: cover;
         margin-bottom: 10px;
+
+    }
+
+    .project img:hover {
+        opacity: 0.5;
+        transition: ease 0.2s;
+        box-shadow: rgba(77, 77, 77, 0.1) 0 0 10px;
+
+    }
+
+    .project:hover {
+        transition: ease 0.2s;
+
+        box-shadow: rgba(77, 77, 77, 0.1) 0 0 10px;
 
     }
 
