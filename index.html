@@ -30,55 +30,59 @@
 
             <nav>
                 <ul>
-                    <li><a href="products.html">SMYKKER</a></li>
-                    <li><a href="projects.html">PROJEKTER</a></li>
-                    <li><a href="about.html">OM OS</a></li>
-                    <li><a href="contact.html">KONTAKT</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a></li>
+                    <li><a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a></li>
                 </ul>
             </nav>
         </div>
 
 
         <div id="desktop_menu">
-            <a href="products.html">SMYKKER</a>
-            <a href="projects.html">PROJEKTER</a>
-            <a href="index.html">LOGO</a>
-            <a href="about.html">OM OS</a>
-            <a href="contact.html">KONTAKT</a>
+            <a onclick="transitionOut()" href="javascript:delay('products.html')">SMYKKER</a>
+            <a onclick="transitionOut()" href="javascript:delay('projects.html')">PROJEKTER</a>
+            <a onclick="transitionOut()" href="javascript:delay('index.html')">LOGO</a>
+            <a onclick="transitionOut()" href="javascript:delay('about.html')">OM OS</a>
+            <a onclick="transitionOut()" href="javascript:delay('contact.html')">KONTAKT</a>
         </div>
 
     </header>
 
-    <video class="splash" autoplay loop>
-        <source src="http://mouad.dk/kea2semester/Eksamen/wordpress/wp-content/uploads/2019/05/Splash.mp4" type="video/mp4">
-    </video>
-    <a href="#overskrift"><img class="pilned" src="img/splashpil.png"></a>
 
 
 
+    <div class="fade_in">
 
+        <main>
 
+            <video class="splash" id="vid" autoplay loop>
+                <source src="http://mouad.dk/kea2semester/Eksamen/wordpress/wp-content/uploads/2019/05/Splash.mp4" type="video/mp4">
+            </video>
+            <section class="padding">
+                <a href="#overskrift"><img class="pilned" src="img/splashpil.png"></a>
 
-    <main>
-        <div class="Overskrift" id="overskrift">
-            <h1>NYESTE SMYKKER</h1>
+                <div class="Overskrift" id="overskrift">
+                    <h1>NYESTE SMYKKER</h1>
+                </div>
+                <section id="liste">
+                </section>
+            </section>
+        </main>
+        <div class="sealle">
+            <a href="products.html">SE ALLE</a>
+
         </div>
-        <section id="liste">
-        </section>
-    </main>
-    <div class="sealle">
-        <a href="products.html">SE ALLE</a>
 
+        <footer></footer>
     </div>
-
-    <footer></footer>
-
 
     <script>
         document.addEventListener("DOMContentLoaded", start)
 
         let project;
         async function start() {
+            console.log("start")
             const json = await fetch("http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykker?per_page=6");
             project = await json.json();
             visProject();
@@ -99,6 +103,8 @@
 
         };
     </script>
+
+    <script src="js/transition.js"></script>
 </body>
 
 </html>

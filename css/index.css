@@ -6,19 +6,16 @@
             position: absolute;
             width: 5rem;
             height: auto;
-            top: 0;
-            text-align: center;
-            z-index: 5;
-            padding-left: 45vw;
-            padding-top: 50vw;
+            top: 40vw;
+            left: 47%;
+            right: 48%;
+
         }
 
         .splash {
-            width: auto;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-position: center;
-            text-align: center;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .container img {
@@ -32,7 +29,7 @@
 
 
 
-        main {
+        .padding {
             text-align: center;
         }
 
@@ -49,7 +46,7 @@
                 grid-column-gap: 0;
             }
 
-            main {
+            .padding {
                 text-align: center;
                 padding: 5vw;
                 padding-top: 0;
@@ -65,14 +62,7 @@
 
 
 
-        @media only screen and (min-width: 800px) {
-            .pilned {
 
-                padding-left: 47vw;
-                padding-top: 48vw;
-            }
-
-        }
 
         a {
             text-decoration: none;
@@ -108,7 +98,7 @@
                 grid-column-gap: 0;
             }
 
-            main {
+            .padding {
                 text-align: center;
                 padding: 12vw;
                 padding-top: 0;
@@ -132,6 +122,16 @@
 
 
         @media only screen and (min-width: 1000px) {
+            .pilned {
+                position: absolute;
+                width: 5rem;
+                height: auto;
+                top: 50vw;
+                left: 48%;
+                right: 48%;
+
+            }
+
             .project p {
                 max-width: 22vw;
             }
@@ -140,7 +140,7 @@
                 margin-bottom: 5vw;
             }
 
-            main {
+            .padding {
                 text-align: center;
                 padding: 14vw;
                 padding-top: 0;
