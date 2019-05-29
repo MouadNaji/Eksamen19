@@ -1,6 +1,6 @@
 /*////////////////////////////////////////////////////////////////////////////////////Logo///////////////////////////////////////////////////////////////////////////////////////*/
 
-#logo {
+.logo {
     margin: auto;
     height: auto;
     width: 50vw;
@@ -8,7 +8,7 @@
 
 }
 
-#logo img {
+.logo img {
     height: auto;
     width: 50vw;
     margin: auto;
@@ -18,13 +18,13 @@
 
 @media only screen and (min-width: 800px) {
 
-    #logo {
+    .logo {
         margin: 0;
         height: 80px;
         width: auto;
     }
 
-    #logo img {
+    .logo img {
         height: 80px;
         margin: 0;
         width: auto;

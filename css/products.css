@@ -97,8 +97,8 @@
     #large_box img {
 
         height: auto;
-        width: 50vw;
-        height: 50vw;
+        width: 49.5vw;
+        height: 49.5vw;
         ;
         margin: 3px;
         position: relative;
@@ -178,8 +178,8 @@
 
     #large_box:hover .overlay_large {
         opacity: 1;
-        width: 50vw;
-        height: 50vw;
+        width: 49.5vw;
+        height: 49.5vw;
 
         max-width: 600px;
         max-height: 600px;
@@ -196,6 +196,87 @@
     }
 
     #small2:hover .overlay_small {
+        opacity: 1;
+        width: 24.5vw;
+        height: 24.5vw;
+
+        max-width: 297px;
+        max-height: 297px;
+    }
+
+
+    /*    hehehe*/
+
+    #large_box2 {
+        position: relative;
+    }
+
+
+    #large_box2 img {
+
+        height: auto;
+        width: 49.5vw;
+        height: 49.5vw;
+        ;
+        margin: 3px;
+        position: relative;
+
+        max-width: 600px;
+        max-height: 600px;
+
+    }
+
+
+
+    #small_box2 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    #small11 {
+        position: relative;
+    }
+
+    #small22 {
+        position: relative;
+    }
+
+    #small_box2 img {
+        height: auto;
+        width: 24.5vw;
+        height: 24.5vw;
+
+        margin: 3px;
+
+        max-width: 297px;
+        max-height: 297px;
+
+    }
+
+
+
+
+    #large_box2:hover .overlay_large {
+        opacity: 1;
+        width: 49.5vw;
+        height: 49.5vw;
+
+        max-width: 600px;
+        max-height: 600px;
+
+    }
+
+    #small11:hover .overlay_small {
+        opacity: 1;
+        width: 24.5vw;
+        height: 24.5vw;
+
+        max-width: 297px;
+        max-height: 297px;
+    }
+
+    #small22:hover .overlay_small {
         opacity: 1;
         width: 24.5vw;
         height: 24.5vw;
