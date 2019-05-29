@@ -1,37 +1,53 @@
 #indhold img {
     max-width: 80vw;
     height: auto;
-    padding: 2rem;
-    padding-left: 0;
     object-fit: cover;
+    margin: 50px auto;
 
 }
+
 
 #indhold p {
     text-align: left;
 }
 
 #indhold {
+
     width: 80vw;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#tilbage {
+    text-align: center;
+    margin: auto;
+    text-decoration: underline;
+    color: #4d4d4d;
+    margin-bottom: 50px;
+    cursor: pointer;
+
 }
 
 @media only screen and (min-width: 800px) {
     #indhold {
-        padding: 5rem;
-        padding-top: 8rem;
+        margin-top: 200px;
         width: 80vw;
         max-width: 800px;
         text-align: center;
     }
 
     #indhold img {
-        height: auto;
-        padding: 2rem;
-        padding-left: 0;
-        width: 80vw;
+        margin: 50px 0;
+        padding: 0;
+        width: 30vw;
         max-width: 800px;
 
+    }
+
+    #indhold h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        text-transform: uppercase;
     }
 }

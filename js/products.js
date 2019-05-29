@@ -8,7 +8,7 @@ let smykker;
 
 async function hentTekst() {
     //her startes en async funktion
-    const tekstUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/78";
+    const tekstUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/78";
     //her sættes link med rest api ind
     const tekstJson = await fetch(tekstUrl);
     //her hentes data filen som er lavet i wordpress
@@ -44,7 +44,7 @@ function showTekst() {
 
 async function hentRinge() {
     //her startes en async funktion
-    const ringsUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/40";
+    const ringsUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/40";
     //her sættes link med rest api ind
     const ringJson = await fetch(ringsUrl);
     //her hentes data filen som er lavet i wordpress
@@ -87,7 +87,7 @@ function showRings() {
 
 async function hentWeddingRinge() {
     //her startes en async funktion
-    const weddingRingsUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/41";
+    const weddingRingsUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/41";
     //her sættes link med rest api ind
     const weddingRingJson = await fetch(weddingRingsUrl);
     //her hentes data filen som er lavet i wordpress
@@ -140,7 +140,7 @@ function showWeddingRings() {
 
 async function hentEarRings() {
     //her startes en async funktion
-    const earRingsUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/42";
+    const earRingsUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/42";
     //her sættes link med rest api ind
     const earRingJson = await fetch(earRingsUrl);
     //her hentes data filen som er lavet i wordpress
@@ -174,7 +174,7 @@ function showEarRings() {
 
 async function hentNecklaces() {
     //her startes en async funktion
-    const necklacesUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/44";
+    const necklacesUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/44";
     //her sættes link med rest api ind
     const necklacesJson = await fetch(necklacesUrl);
     //her hentes data filen som er lavet i wordpress
@@ -213,7 +213,7 @@ function showNecklaces() {
 
 async function hentBracelets() {
     //her startes en async funktion
-    const braceletsUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/43";
+    const braceletsUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/43";
     //her sættes link med rest api ind
     const braceletsJson = await fetch(braceletsUrl);
     //her hentes data filen som er lavet i wordpress
@@ -249,7 +249,7 @@ function showBracelets() {
 
 async function hentGifts() {
     //her startes en async funktion
-    const giftsUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/45";
+    const giftsUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykke-kategorien/45";
     //her sættes link med rest api ind
     const giftsJson = await fetch(giftsUrl);
     //her hentes data filen som er lavet i wordpress

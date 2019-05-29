@@ -45,7 +45,7 @@
     box-sizing: border-box;
     background: rgb(255, 255, 255);
 
-    color: #4d4d4d;
+    color: #9e8555;
     padding: 5px;
     font-size: 16px;
     border: none;
@@ -53,15 +53,24 @@
 
     line-height: normal;
     width: 100vw;
+    height: 100px;
     box-shadow: rgba(75, 75, 75, 0.32) 0px 0px 50px;
     background: #FBFBF9;
 
 
 }
 
+div.sticky {
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+}
+
 .dropbtn:hover,
 .dropbtn:focus {
-    background-color: #bfbfbf;
+    background-color: #ffffff;
 }
 
 
@@ -73,7 +82,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f6f6f6;
+    background-color: white;
     min-width: 230px;
     overflow: auto;
     border: 1px solid #ddd;
@@ -104,6 +113,7 @@
     font-size: 20px;
     cursor: pointer;
     font-size: 1rem;
+    background-color: white;
 }
 
 
@@ -169,7 +179,7 @@ span {
     margin: 0;
     padding: 0;
     cursor: pointer;
-    color: #4d4d4d;
+    color: #9e8555;
     font-weight: 100;
 }
 

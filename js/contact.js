@@ -8,7 +8,7 @@ let info;
 
 async function hentData() {
     //her startes en async funktion
-    const dataUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/kontakt/67";
+    const dataUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/kontakt/67";
     //her sættes link med rest api ind
     const dataJson = await fetch(dataUrl);
     //her hentes data filen som er lavet i wordpress

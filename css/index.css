@@ -16,6 +16,7 @@
             width: 100vw;
             height: 100vh;
             object-fit: cover;
+            position: relative;
         }
 
         .container img {
@@ -64,7 +65,7 @@
 
 
 
-        a {
+        .project a {
             text-decoration: none;
         }
 
@@ -102,7 +103,6 @@
                 text-align: center;
                 padding: 12vw;
                 padding-top: 0;
-                padding-bottom: 2rem;
             }
 
             .project img {
@@ -131,9 +131,7 @@
 
             }
 
-            .project p {
-                max-width: 22vw;
-            }
+            .project p {}
 
             #projects_title h1 {
                 margin-bottom: 5vw;
@@ -145,6 +143,7 @@
                 padding-bottom: 2rem;
                 width: 80vw;
                 margin: auto;
+                margin-top: 50px;
 
             }
 

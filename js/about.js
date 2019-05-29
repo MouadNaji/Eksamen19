@@ -8,7 +8,7 @@ let info;
 
 async function hentData() {
     //her startes en async funktion
-    const dataUrl = "http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/om_os/61";
+    const dataUrl = "https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/om_os/61";
     //her sættes link med rest api ind
     const dataJson = await fetch(dataUrl);
     //her hentes data filen som er lavet i wordpress
@@ -38,7 +38,7 @@ function showData() {
     document.querySelector("#about_title").innerHTML += `
 
 
-                    <h1>${info.overskrift}</h1>
+                    <h1>${info.overskrift2}</h1>
 
             `
 

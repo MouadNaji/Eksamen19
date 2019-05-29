@@ -1,13 +1,17 @@
 /*////////////////////////////////////////////////////////////////////////////////////Logo///////////////////////////////////////////////////////////////////////////////////////*/
 
 #logo {
-    margin: 0;
-    height: 100px;
+    margin: auto;
+    height: auto;
+    width: 50vw;
+
+
 }
 
 #logo img {
-    height: 100px;
-    margin: 0;
+    height: auto;
+    width: 50vw;
+    margin: auto;
 
 }
 
@@ -17,11 +21,14 @@
     #logo {
         margin: 0;
         height: 80px;
+        width: auto;
     }
 
     #logo img {
         height: 80px;
         margin: 0;
+        width: auto;
+
 
     }
 }
@@ -141,7 +148,7 @@ body input ~ nav > ul > li > a {
 
     display: block;
     padding: 2vh;
-    font-size: 4vh;
+    font-size: 3vh;
     letter-spacing: 2px;
     z-index: 100;
 
@@ -177,7 +184,7 @@ body input:checked ~ nav > ul > li {
         top: 0;
         padding: 0;
         width: 100vw;
-        background: white;
+        background: rgb(252, 255, 254);
         position: fixed;
         z-index: 100;
         box-shadow: black 0 -70px 100px;
@@ -193,10 +200,9 @@ body input:checked ~ nav > ul > li {
         color: #4D4D4D;
         text-decoration: none;
         font-size: 1rem;
-        margin: 0 3vw;
+        margin: 20px 3vw;
         color: #9e8555;
         letter-spacing: 1px;
-        padding: 20px 0;
         width: 100px;
         text-align: center;
 

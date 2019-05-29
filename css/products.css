@@ -1,17 +1,12 @@
 #about_products {
 
     text-align: center;
-    margin: 150px 12vw 80px;
+    margin: 100px 10vw 30px;
     width: 80vw;
     max-width: 800px;
 
 }
 
-#about_products h1 {
-
-    margin-bottom: 50px;
-
-}
 
 
 
@@ -50,7 +45,7 @@
 }
 
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
 
     /*
     #upper_box .text {

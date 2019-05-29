@@ -27,7 +27,7 @@ function start() {
     async function getJson() {
 
 
-        let jsonData = await fetch("http://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykker?per_page=100");
+        let jsonData = await fetch("https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykker?per_page=100");
         photos = await jsonData.json();
         showRings();
 

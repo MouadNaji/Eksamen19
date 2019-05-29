@@ -9,7 +9,7 @@
 
         async function start() {
 
-            const json = await fetch("http://mouad.dk/kea2semester/Eksamen/wordpress//wp-json/wp/v2/projekter/");
+            const json = await fetch("https://mouad.dk/kea2semester/Eksamen/wordpress//wp-json/wp/v2/projekter/");
 
             projekter = await json.json();
             visRetterne();
