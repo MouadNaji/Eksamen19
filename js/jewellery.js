@@ -364,7 +364,7 @@ function openDesktop(evt, eventName) {
 function onClick(element) {
 
     document.querySelector("html, body").style.overflowY = "hidden";
-    document.getElementById("img01").src = element.src;
+    document.querySelector("#img01").src = element.src;
     document.getElementById("modal01").style.display = "block";
 }
 

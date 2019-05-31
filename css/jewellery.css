@@ -22,12 +22,39 @@
 .tabcontent {
     display: none;
     margin: 15vw;
+    animation: fadeEffect 1s;
+    -webkit-animation: fadeEffect 1s;
+
+
 
 
 }
 
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 #myDropdown {
     border: none;
+    animation: fadeEffect 0.2s;
+    -webkit-animation: fadeEffect 0.2s;
 
 }
 
@@ -77,6 +104,7 @@ div.sticky {
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 2;
 }
 
 .dropdown-content {
@@ -137,9 +165,16 @@ div.sticky {
     position: fixed;
     left: 0;
     top: 0;
+    width: 100vw;
+    height: 100vh;
     overflow: auto;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4)
+    background-color: #FBFBF9;
+    -webkit-animation: fadeEffect .1s;
+    animation: fadeEffect .1s;
+
+
+
 }
 
 .w3-modal-content {
@@ -153,6 +188,8 @@ div.sticky {
     height: 100vh;
     z-index: 100;
     text-align: center;
+
+
 
 
 
@@ -265,26 +302,7 @@ span {
 
     }
 
-    /* Fade in tabs */
-    @-webkit-keyframes fadeEffect {
-        from {
-            opacity: 0;
-        }
 
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fadeEffect {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
 
 
     .tabcontent img {
@@ -356,5 +374,37 @@ span {
         z-index: 200;
     }
 
+
+}
+
+
+#img01 {
+    background: white;
+    margin: auto;
+    display: block;
+
+    width: 90vw;
+    height: 90vw;
+    margin: auto;
+
+
+    margin: auto;
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+
+}
+
+
+@media only screen and (min-width:800px) {
+
+    #img01 {
+        width: 80vh;
+        height: 80vh;
+    }
 
 }
