@@ -106,28 +106,38 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", start)
+        //her bliver der sørget for at den går igang med funktionen start efter DOM er loaded
 
         let project;
+        //Her difineres variablen project
         async function start() {
+            //her startes en async funktion
             console.log("start")
+            //sørger for at funktionen kommer op i console
             const json = await fetch("https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykker?per_page=6");
+            //her sættes link med rest api ind
             project = await json.json();
+            //Her defineres json indholdet som variablen project
             visProject();
+            //her kaldes en ny funktion
         }
 
         let filter = "alle";
-
+        //her defineres en variabel
 
         function visProject() {
+            //her starter en funktion
             let liste = document.querySelector("#liste");
+            //her defineres en variabel og der bliver valgt et element med id liste
             liste.innerHTML = "";
-
+            //her sørges for at elementet med id liste er tomt
             project.forEach(pro => {
+                //her starter et loop
                 let template = `<div class="project"><img id="billede" src=${pro.smykkebillede.guid} alt="ret"></div>`
+                //her defineres hvilke indhold der skal hentes og hvordan det skal struktureres for hver loop
                 liste.insertAdjacentHTML("beforeend", template);
+                //her indsættes indholdet fra variablen template i variablen liste
             });
-
-
         };
 
     </script>
