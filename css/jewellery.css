@@ -180,7 +180,7 @@ div.sticky {
 .w3-modal-content {
 
     margin: auto;
-    background-color: #fff;
+    background-color: #FBFBF9;
     position: fixed;
     padding: 0;
     outline: 0;
@@ -188,7 +188,8 @@ div.sticky {
     height: 100vh;
     z-index: 100;
     text-align: center;
-
+    -webkit-animation: fadeEffect .1s;
+    animation: fadeEffect .1s;
 
 
 
@@ -202,6 +203,8 @@ div.sticky {
     object-fit: cover;
     height: 80vw;
     width: 80vw;
+    -webkit-animation: fadeEffect .1s;
+    animation: fadeEffect .1s;
 
 
 }
@@ -295,17 +298,28 @@ span {
         padding: 0;
         -webkit-animation: fadeEffect 1s;
         animation: fadeEffect 1s;
-        width: 80vw;
+        width: 70vw;
         margin: auto;
-        text-align: center;
+        text-align: left;
         margin-bottom: 50px;
+        grid-column-gap: 10px;
+        justify-content: center;
 
+
+
+    }
+
+    .top {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 256px);
+        justify-content: center;
     }
 
 
 
-
     .tabcontent img {
+
+
 
         width: 250px;
         height: 250px;
@@ -349,7 +363,6 @@ span {
     .w3-modal-content {
 
         margin: auto;
-        background-color: #fff;
         padding: 0;
         outline: 0;
         width: 100vw;
