@@ -34,15 +34,6 @@ function showData() {
             `
 
 
-    document.querySelector("#contact_img").innerHTML += `
-
-
-<img src="${info.billede.guid}" alt="Kontakt frolov og Savova">
-
-
-
-
-            `
 
 
 
@@ -78,8 +69,8 @@ function showData() {
 
 
 
-                <p> ${info.some_tekst}
-                </p>
+                ${info.some_tekst}
+
 
 
             `

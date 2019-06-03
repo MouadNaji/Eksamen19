@@ -30,6 +30,8 @@
 
 }
 
+
+
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
     from {
@@ -172,6 +174,21 @@ div.sticky {
     background-color: #FBFBF9;
     -webkit-animation: fadeEffect .1s;
     animation: fadeEffect .1s;
+
+
+
+}
+
+.w3-modal-content a {
+    position: absolute;
+    margin: auto;
+    bottom: 5vh;
+    left: 0;
+    right: 0;
+
+    background: #f0f0f0;
+    width: 130px;
+    text-decoration: none;
 
 
 
@@ -396,8 +413,8 @@ span {
     margin: auto;
     display: block;
 
-    width: 90vw;
-    height: 90vw;
+    width: 80vw;
+    height: 80vw;
     margin: auto;
 
 
@@ -416,8 +433,8 @@ span {
 @media only screen and (min-width:800px) {
 
     #img01 {
-        width: 80vh;
-        height: 80vh;
+        width: 60vh;
+        height: 60vh;
     }
 
 }
