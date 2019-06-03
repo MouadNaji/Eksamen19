@@ -5,7 +5,11 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frolov og Savova</title>
+    <meta name="description" content="Frolov & Savova Smykkekunst er specialiseret i at skabe helt unikke smykker, som passer præcis til din personlige stil.">
+
+    <meta name="keywords" content="smykker, smykkekunst, smykkehåndværk, smykker i københavn, smykkehandler københavn, smykkebutik københavn, smykkehandler danmark, kvalitetssmykker, diamanter, guldsmed i københavn, guld og sølv, natursmykker, smykkehåndværk, dansk design, danske smykker, personlige smykker, unika smykker, unikke smykker, custom made jewellery, jewellery denmark, smykkedyr, frø på smykke, salamander på smykke, guldsmed på smykke bedste smykkehandler i danmark, bedste smykkehandler i københavn, de mest personlige smykker, affektionsværdi, smykker i højeste kvalitet, smykkehandler central københavn, smykkedesigner, smaragder, kobber, rubiner, perlemor, ægte perler">
+    <title>Forside | Frolov og Savova Smykkekunst
+    </title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/index.css">
 
@@ -106,33 +110,40 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", start)
+        //her bliver der sørget for at den går igang med funktionen start efter DOM er loaded
 
         let project;
+        //Her difineres variablen project
         async function start() {
+            //her startes en async funktion
             console.log("start")
+            //sørger for at funktionen kommer op i console
             const json = await fetch("https://mouad.dk/kea2semester/Eksamen/wordpress/wp-json/wp/v2/smykker?per_page=6");
+            //her sættes link med rest api ind
             project = await json.json();
+            //Her defineres json indholdet som variablen project
             visProject();
+            //her kaldes en ny funktion
         }
 
         let filter = "alle";
-
+        //her defineres en variabel
 
         function visProject() {
+            //her starter en funktion
             let liste = document.querySelector("#liste");
+            //her defineres en variabel og der bliver valgt et element med id liste
             liste.innerHTML = "";
-
+            //her sørges for at elementet med id liste er tomt
             project.forEach(pro => {
+                //her starter et loop
                 let template = `<div class="project"><img id="billede" src=${pro.smykkebillede.guid} alt="ret"></div>`
+                //her defineres hvilke indhold der skal hentes og hvordan det skal struktureres for hver loop
                 liste.insertAdjacentHTML("beforeend", template);
+                //her indsættes indholdet fra variablen template i variablen liste
             });
-
-
         };
-
     </script>
 
     <script src="js/transition.js"></script>
-</body>
-
-</html>
+</body></html>
