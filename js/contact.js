@@ -25,13 +25,13 @@ function showData() {
 
 
 
-
-    document.querySelector("#contact_title").innerHTML += `
-
-
-                    <h1>${info.overskrift}</h1>
-
-            `
+//
+//    document.querySelector("#contact_title").innerHTML += `
+//
+//
+//                    <h1>${info.overskrift}</h1>
+//
+//            `
 
 
 
